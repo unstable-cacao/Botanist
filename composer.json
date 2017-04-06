@@ -1,0 +1,19 @@
+{
+    "name": "unstable-cacao/botanist",
+    "description": "Annotations library (yes, another one)",
+    "type": "lib",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexey Puchkov",
+            "email": "alexey@oktopost.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-0": {
+            "Botanist": "src"
+        }
+    }
+}
