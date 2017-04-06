@@ -25,12 +25,20 @@ class Comment
 			{
 				return self::get(new \ReflectionFunction($source));
 			}
-			else
+			else if (is_array($source))
+			{
+				return self::get(new \ReflectionMethod(...$source));
+			}
+			else 
 			{
 				return self::get(new \ReflectionMethod($source));
 			}
 		}
 		else if (is_object($source))
+		{
+			return self::get(new \ReflectionClass($source));
+		}
+		else if (is_string($source) && class_exists($source))
 		{
 			return self::get(new \ReflectionClass($source));
 		}
